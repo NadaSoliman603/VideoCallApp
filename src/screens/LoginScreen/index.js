@@ -7,13 +7,25 @@ import {
   Text,
   Alert,
 } from 'react-native';
+import {useNavigation} from '@react-navigation/core';
 
 
 function LoginScreen() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const signIn = ()=>{}
+    const navigation = useNavigation()
+
+    const signIn = ()=>{
+        navigation.reset({
+            index:0,
+            routes:[
+                {
+                    name:"Contacts"
+                }
+            ]
+        })
+    }
     return ( 
         <View style={styles.page}>
         <TextInput

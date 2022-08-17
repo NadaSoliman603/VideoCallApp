@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import CallActionBox from '../../components/CallActions';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { useNavigation } from '@react-navigation/core';
 
 
 function CallingScreen() {
@@ -17,10 +18,15 @@ function CallingScreen() {
     const [callStatus, setCallStatus] = useState('Initializing...');
     const [localVideoStreamId, setLocalVideoStreamId] = useState('');
     const [remoteVideoStreamId, setRemoteVideoStreamId] = useState('');
+    const navigation = useNavigation()
+
+    const goBack = ()=>{
+        navigation.pop()
+    }
 
     return ( 
         <View style={styles.page}>
-        <Pressable onPress={()=>{}} style={styles.backButton}>
+        <Pressable onPress={goBack} style={styles.backButton}>
           <Ionicons name="chevron-back" color="white" size={35} />
         </Pressable>
   

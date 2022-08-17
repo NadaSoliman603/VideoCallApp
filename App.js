@@ -19,6 +19,7 @@ import Call from './src/screens/CallScreen';
 import CallingScreen from './src/screens/CallingScreen';
 import IncomingCall from './src/screens/IncomingCall';
 import LoginScreen from './src/screens/LoginScreen';
+import Navigation from './src/navigation';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -32,7 +33,8 @@ const App = () => {
       {/* <Call/> */}
       {/* <CallingScreen/> */}
       {/* <IncomingCall/> */}
-      <LoginScreen/>
+      {/* <LoginScreen/> */}
+      <Navigation/>
     </>
   );
 };
